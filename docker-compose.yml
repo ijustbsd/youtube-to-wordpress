@@ -1,0 +1,15 @@
+version: "3"
+services:
+  bot:
+    build: .
+    restart: always
+    volumes:
+      - ./app:/app
+    environment:
+      - BOT_API_TOKEN=xxx
+      - TG_CHAT_ID=-123456789
+      - YT_API_KEY=yyy
+      - YT_CHANNEL_ID=zzz
+      - WP_USER=user
+      - WP_APP_PWD=password
+      - WP_URL=https://example.com
