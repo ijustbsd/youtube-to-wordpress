@@ -76,7 +76,7 @@ async def make_wp_post(title, video_id):
                 return resp_data['link']
 
 
-@dp.message_handler(commands=['post'])
+@dp.message_handler(commands=['post'], chat_id=TG_CHAT_ID)
 async def post(message: types.Message):
     title, video_id = await get_last_video()
     title = title[title.find('.') + 2:-1]
